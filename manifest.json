@@ -1,0 +1,24 @@
+{
+	"manifest_version": 3,
+	"name": "No YouTube Shorts",
+	"version": "1.0",
+	"description": "Hides or redirects YouTube Shorts",
+	"permissions": ["webNavigation", "tabs", "scripting"],
+	"host_permissions": ["*://*.youtube.com/*"],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"content_scripts": [
+		{
+			"matches": ["*://www.youtube.com/*"],
+			"css": ["index.css"],
+			"run_at": "document_idle"
+		}
+	],
+	"action": {
+		"default_title": "No Shorts"
+	},
+	"icons": {
+		"16": "icon.png"
+	}
+}

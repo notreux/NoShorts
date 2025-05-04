@@ -1,0 +1,6 @@
+a[title='Shorts'],
+ytd-mini-guide-entry-renderer[aria-label='Shorts'],
+ytd-rich-section-renderer,
+ytd-reel-shelf-renderer {
+	display: none !important;
+}
